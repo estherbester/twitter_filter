@@ -5,7 +5,7 @@ A Javascript Twitter parser for keyword cluster search.
 
 While I was making my food truck app, it occurred to me that it was really just a Twitter search filter-er, so I abstracted out the foodtruck-related stuff as much as I could.
 
-Just fill in the data structure at the top of foodtruck.js with a keyword cluster and you're basically good to go.
+Just fill in the data structure ('keyword_cluster') near the top of twitter_filter.js with a bunch of keyword clusters, and you're basically good to go.
 
 I've included the HTML/CSS for my food truck app to serve as an example. `See it live here <http://ft.esthernam.com>`_
 
