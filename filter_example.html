@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script type="text/javascript" src="jquery.min.js" ></script>
+<script type="text/javascript" src="jquery.quicksearch.js"></script>
+<script type="text/javascript" src="date.js"></script>
+<script type="text/javascript" src="twlinkify.js"></script>
+<script type="text/javascript" src="twitter_filter.js" ></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="shortcut icon" type="image/x-icon"
+	  href="favicon.ico">
+
+<title>Los Angeles Neighborhood Food Truck Tracker</title>
+
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+	  <a name="top" href="/"><img src="http://style.esthernam.com/django_media/foodtruck/trucky1.png" /></a>
+	  <h1>L.A. Food Truck Twitter Tracker</h1>
+	</div>
+
+	<div id="main">
+		<h2 id="current-nav" style="display:none;">Food trucks in <span></span> <span class='small raw_feed'>Remove filter</span></h2>
+
+		<div id="keyword-list" style="display:none;">
+			<h4>Filtered by these keywords:</h4>
+		</div>
+		<div id="tweet-search">
+			<form method="get" action="#">
+			<fieldset>
+				<strong>Quick Search</strong>
+				<span class="small">Filter this stream further:</span>
+				<input id="search" disabled="false" type="text" name="search" value="">
+			</fieldset>
+			</form>
+
+		</div>
+
+		<div id="posts">
+
+			<!--div class="tweet">
+			<a href="screen name url" rel="nofollow"><img src="screen profile image url" /></a>
+			<strong><a href="screen name url" rel="nofollow">screen_name</a></strong>
+			<span class="text">tweet text</span>
+			<span class="time"><a href="status id url" rel="nofollow">date time</a></span>
+			</div-->
+
+		</div>
+		<div id="throbber" style="display:none;"> <em><blink>Loading... </blink></em></div>
+
+		<div id="failed" style="display:none">
+				<p>Could not find the tweets you were looking for =( </p>
+				<p class="raw_feed">Load full stream with no filters</p>
+		</div>
+
+	</div>
+
+	<div id="sidebar">
+		<h4>Areas:</h4>
+	    <ul id="nav">
+ 			  <li id="ft_no-filter" class="nav_link">No Filter</li>
+		      <li id="ft_hollywood" class="nav_link">Hollywood</li>
+		      <li id="ft_santa-monica" class="nav_link">Santa Monica</li>
+		      <li id="ft_pico-robertson" class="nav_link">Pico/Robertson</li>
+		      <li id="ft_miracle-mile" class="nav_link">Miracle Mile</li>
+		      <li id="ft_ucla" class="nav_link">UCLA</li>
+		      <li id="ft_downtown-la" class="nav_link">Downtown LA</li>
+		      <li id="ft_silverlake" class="nav_link">Silverlake</a></li>
+		      <li id="ft_pasadena" class="nav_link">Pasadena</li>
+		      <li id="ft_tarzana" class="nav_link">Tarzana</a></li>
+
+		      <!--li class="nav"><a href="#">Hulu</a></li>
+		      <li class="nav"><a href="#">Culver City</a></li>
+		      <li class="nav"><a href="#">TruckGrp2HH</a></li>
+		      <li class="nav"><a href="#">Cars-SM</a></li-->
+	    </ul>
+
+		<br />
+
+		<h4>Useful links</h4>
+		<ul id="site_links">
+			<li><a href="http://twitter.com/#!/estherbester/food/members" rel="nofollow">Trucks being followed</a></li>
+
+			<li><a href="http://twitter.com/estherbester/lists/food" rel="nofollow">Original Twitter stream</a></li>
+
+			<li><a href="http://www.foodtrucksmap.com/la/" rel="nofollow">TruxMap LA</a></li>
+
+			<li><a href="http://www.foodtruckdeals.com/" rel="nofollow">Food Truck Deals</a></li>
+
+			<li><a href="http://clustertruck.org" rel="nofollow">ClusterTruck</a></li>
+
+			<li><a href="http://la.eater.com" rel="nofollow">Eater LA</a></li>
+
+			<li><a href="http://wheresmytaco.com" rel="nofollow">Where&#39;s My Taco?</a></li>
+
+			<li><a href="http://www.roaminghunger.com" rel="nofollow">Roaming Hunger</a></li>
+
+		</ul>
+	</div>
+	<br /><br /><div class="clear"></div>
+	<div id="footer">
+		<h4>ABOUT</h4>
+		<p>The LA Neighborhood Food Truck Tracker uses a <a href="http://twitter.com/estherbester/food/members" rel="nofollow">Twitter list</a> to help you find food trucks when they stop by your neighborhood. There are currently 200+ gourmet food trucks roaming our fair city, and chances are there's one near you that you'll love! </p>
+
+		<p>&#169; 2012 Esther Nam. If you have any questions or know of other LA-area food trucks not on this list, email me@esthernam.com</p>
+	</div>
+</div><!-- container -->
+
+<script type="text/javascript">
+if (FT !== undefined)
+{
+// Hash is shortcut to a specific neighborhood
+var current_nav = window.location.hash.replace('#','');
+
+if (current_nav === ""){
+	current_nav = "no-filter";
+}
+
+var filter_options = {
+			current_cluster: current_nav,
+			nav_link_prefix: 'ft_',
+	        container_div : $('#posts'),
+	        header_div: 'h2#current-nav',
+	        fail_div: $('#failed'),
+	        search_div: '#tweet-search',
+			since_id : null // we dont' use this yet
+		},
+	foodtruck = FT.construct(filter_options);
+}
+</script>
+</body>
+
+
+</html>

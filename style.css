@@ -1,0 +1,61 @@
+body{padding:10px 20px;margin:auto;font-family: Georgia, Verdana, Arial, Sans-serif}
+
+a{color:#003B56;font-weight:bold;text-decoration:none;}
+a:hover{border-bottom:dotted 1px}
+
+/* frame */
+#container{position:relative;max-width:1200px;min-width:1000px;margin:auto;padding:0}
+
+#main{margin: 0  0  0 210px;position:relative;}
+#sidebar{width:190px;position:absolute;top:125px;}
+#footer{font-size:.9em;padding-top:10px;color:#333;left:210px;position:relative}
+#tweet-search, #posts, #throbber, #failed, #keyword-list{width:75%;}
+
+#container p{max-width:600px}
+#container p.small{font-size:.9em}
+
+
+#header h1{color:#01202E;border-bottom:solid 4px #c9eeff;font-size:.75em;margin: 0;font-weight:normal;width:80%;padding:2px 2px 2px 4px ;}
+#header img{position:absolute;left:0!important;top:2em !important;}
+h4{font:bold 1.1em Georgia, Serif }
+p{clear:left;margin-top:1em;}
+.small{font-size:.9em;}
+.clear{width:100%;clear:both;}
+
+#nav .hood_link{padding:2px 1em;color:#003B56;cursor:pointer;margin:2px 0;}
+#nav .hood_link:hover{background:#f43;color:#fff;}
+#nav .hood_link.ui-selected{background:#f43;color:#fff;font-weight:bold;}
+
+
+h2#current-hood{color:#01202E;font-size:1.2em;font-family:Helvetica, Arial, Sans;margin-top:1em}
+h2#current-hood span.raw_feed{color:#f43;font-size:.7em;font-weight:normal;margin-left:.5em;vertical-align:top}
+#keyword-list h4{font-size:.8em;font-style:italic;font-weight:normal;display:inline;font-family:Helvetica, Arial, Sans;}
+#keyword-list span{list-style-type:none;width:100%;margin:.5em 0 1em 0;padding:0;font-family:Helvetica, Arial, Sans;}
+#keyword-list span{display:inline;margin-left:1em;color:#f43;font-size:90%;font-family:Helvetica, Arial, Sans;}
+#posts{width:75%;padding-top:.5em}
+
+#throbber{padding:1em;background:#cef !important;font-weight:bold;color:#003B56!important}
+#failed{padding:1em;color:#368;font-style:italic;}
+.raw_feed{cursor:pointer;color:#f66;font-style:normal;font:.8em normal Helvetica, Arial, Sans;}
+
+.tweet{max-width:700px;min-width:200px;padding:1em 0;border-bottom:dotted 1px grey;line-height:1.4em;margin-right:1em;}
+
+.tweet img{display:block;float:left;margin-right:1em;width:50px;border:solid 1px #888}
+.tweet .text a{font-weight:normal !important;}
+.tweet .time {clear:left;display:block;margin:0 0 0 70px;font-size:.9em;}
+.tweet .time a{font-weight:normal;}
+
+#tweet-search{margin:1em 0 0;color:#01202E;border:solid 1px #ccdcff;background:#c9eeff;font-family:Helvetica, Arial, Sans;}
+#tweet-search strong{font-size:.9em;margin:0 6px}
+#tweet-search #form {margin:0;padding:0}
+#tweet-search input{width:200px;display:inline;margin:0}
+#tweet-search fieldset{padding:0;border:none;margin:6px 0}
+#tweet-search.disabled{color:#777;background:#c9eeff}
+#tweet-search.disabled input{background:#eee;border:1px solid #ddd}
+
+
+#sidebar ul{padding-left:0;list-style:none;font:.9em normal Verdana, Helvetica, sans}
+#sidebar ul li{line-height:195%;}
+#sidebar ul li a{text-transform:capitalize;font-weight:normal}
+
+.expand_all{color:#003b56;cursor:pointer;text-decoration:none;font: .9em normal Verdana, Helvetica, Sans}
