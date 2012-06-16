@@ -7,7 +7,7 @@ While I was making my food truck app, it occurred to me that it was really just 
 
 Just fill in the data structure at the top of foodtruck.js with a keyword cluster and you're basically good to go.
 
-I've included the HTML/CSS for my food truck app to serve as an example. `See it live on <http://ft.esthernam.com>`_
+I've included the HTML/CSS for my food truck app to serve as an example. `See it live here <http://ft.esthernam.com>`_
 
 
 

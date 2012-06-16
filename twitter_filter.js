@@ -84,15 +84,13 @@ var FT = {};
 FT.construct = function(options) {
     var
     // URL should return JSON list of tweets. See examples of options in twitter_options below
-    list_url='http://api.twitter.com/1/lists/statuses.json?callback=?',
-    //list_url = 'test.json',
+    list_url='https://api.twitter.com/1/statuses/user_timeline.json?callback=?',
     //since_id = options.since_id,
 
     /* Specified here: https://dev.twitter.com/docs/api/1/get/lists/statuses */
     twitter_options = {
-        slug : 'food',
-        owner_screen_name : 'estherbester',
-        per_page: 200,
+        owner_screen_name : 'joebiden',// twitter name, string
+        per_page: 50, // number of tweets per fetch
         include_entities : false
     },
     current_cluster = options.current_cluster,
