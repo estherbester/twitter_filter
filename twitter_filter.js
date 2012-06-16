@@ -401,6 +401,5 @@ FT.construct = function(options) {
         _reload(current_cluster);
         return false;
     };
-
 };
 
